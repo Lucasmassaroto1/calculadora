@@ -1,37 +1,36 @@
 <!DOCTYPE html>
-<html lang="pT-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Calculadora</title>
 </head>
 <body>
-    <div class="container">
-            <form class="calc" name="calculator">
-                <input type="text" readonly class="value" name="txt">
-               <span class="num clear" onclick="document.calculator.txt.value =''">c</span>
-               <span class="num" onclick="document.calculator.txt.value += '/'">/</span>
-               <span class="num" onclick="document.calculator.txt.value +='*'">*</span>
-               <span class="num" onclick="document.calculator.txt.value +='7'">7</span>
-               <span class="num" onclick="document.calculator.txt.value +='8'">8</span>
-               <span class="num" onclick="document.calculator.txt.value +='9'">9</span>
-               <span class="num" onclick="document.calculator.txt.value +='-'">-</span>
-               <span class="num" onclick="document.calculator.txt.value +='4'">4</span>
-               <span class="num" onclick="document.calculator.txt.value +='5'">5</span>
-               <span class="num" onclick="document.calculator.txt.value +='6'">6</span>
-               <span class="num plus" onclick="document.calculator.txt.value +='+'">+</span>
-               <span class="num" onclick="document.calculator.txt.value +='1'">1</span>
-               <span class="num" onclick="document.calculator.txt.value +='2'">2</span>
-               <span class="num" onclick="document.calculator.txt.value +='3'">3</span>
-               <span class="num" onclick="document.calculator.txt.value +='0'">0</span>
-               <span class="num" onclick="document.calculator.txt.value +='00'">00</span>
-               <span class="num" onclick="document.calculator.txt.value +='.'">.</span>
-               <span class="num equal" onclick="document.calculator.txt.value =eval(calculator.txt.value)">=</span>  
-            </form>    
-      <h4>By Lucas Silva Massaroto</h4>
+  <div class="calculator">
+    <div id="display" class="display">0</div>
+      <div class="buttons">
+        <button class="btn" onclick="clearDisplay()">C</button>
+        <button class="btn" onclick="chooseOperation('/')">/</button>
+        <button class="btn" onclick="chooseOperation('*')">*</button>
+        <button class="btn" onclick="chooseOperation('-')">-</button>
+        <button class="btn" onclick="appendNumber('7')">7</button>
+        <button class="btn" onclick="appendNumber('8')">8</button>
+        <button class="btn" onclick="appendNumber('9')">9</button>
+        <button class="btn" onclick="chooseOperation('+')">+</button> 
+        <button class="btn" onclick="appendNumber('4')">4</button>
+        <button class="btn" onclick="appendNumber('5')">5</button>
+        <button class="btn" onclick="appendNumber('6')">6</button>
+        <button class="btn" onclick="appendNumber('.')">.</button>
+        <button class="btn" onclick="appendNumber('1')">1</button>
+        <button class="btn" onclick="appendNumber('2')">2</button>
+        <button class="btn" onclick="appendNumber('3')">3</button>
+        <button class="btn" onclick="calculate()">=</button>
+        <button class="btn" onclick="appendNumber('0')">0</button>
     </div>
-    <script src="script.js"></script>
+    <h2><a href="https://www.tiktok.com/@lucasmassaroto1">@lucasmassaroto1</a></h2>
+  </div>
 </body>
 </html>
